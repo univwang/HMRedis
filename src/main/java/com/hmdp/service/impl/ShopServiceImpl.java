@@ -96,6 +96,8 @@ public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements IS
         return shop;
     }
 
+
+    
     private static final ExecutorService CACHE_REBUILD_POOL = Executors.newFixedThreadPool(10);
     public Shop queryWithLogicalExpire(Long id) {
         String key = CACHE_SHOP_KEY + id;
